@@ -2,7 +2,7 @@
 
 A private source repository for the IRG zoning plugin. GitHub access lets you install the package. It does not grant access to the connected app or to Zoneomics credentials.
 
-The Cloudflare Worker handles authenticated Zoneomics lookups. The shared `site-zoning` skill uses that evidence and official records to write the IRG report.
+The hosted MCP endpoints handle authenticated Zoneomics lookups. The shared `site-zoning` skill uses that evidence and official records to write the IRG report.
 
 ## Claude Code
 
@@ -25,7 +25,7 @@ The token grants access to the MCP, not to Zoneomics itself. Claude web has not 
 
 **Codex desktop:** Run `codex plugin marketplace add https://github.com/kavins06/irg-zoning-marketplace`, then select **IRG Zoning** in the desktop plugin directory. The installed app remains subject to its existing access policy.
 
-The OpenAI package references the existing private hosted app, which forwards requests to the same Cloudflare Worker. The Zoneomics credential remains in Cloudflare’s runtime secrets.
+The OpenAI package references the existing private, Sites-hosted MCP app. It uses the same zoning implementation as the Claude Worker and authenticates through ChatGPT. Zoneomics credentials stay in server runtime secrets.
 
 ## Try it
 
