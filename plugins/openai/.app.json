@@ -1,0 +1,5 @@
+{
+  "apps": {
+    "irg-zoning-reports": { "id": "asdk_app_sites_cde1594d83f88191a7e264e4fc89a269", "required": true }
+  }
+}

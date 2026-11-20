@@ -1,0 +1,14 @@
+{
+  "name": "irg-zoning",
+  "owner": {
+    "name": "kavins06"
+  },
+  "plugins": [
+    {
+      "name": "irg-zoning-reports",
+      "source": "./plugins/claude",
+      "description": "Screen parcels and draft zoning reports for IRG Data sites."
+    }
+  ],
+  "description": "Private marketplace for IRG Data parcel screening and zoning research."
+}
