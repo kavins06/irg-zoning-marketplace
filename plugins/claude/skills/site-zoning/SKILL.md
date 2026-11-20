@@ -1,8 +1,9 @@
 ---
 name: site-zoning
-description: Prepare an IRG Data zoning report from an address, coordinates, or parcel boundaries using Zoneomics and official local records.
+description: Prepare an IRG Data zoning report from an address, coordinates, or parcel boundaries using Zoneomics evidence and official local records.
 ---
 
-Use the IRG zoning tool to start the report. Prefer official parcel boundaries and APNs for a deal with multiple parcels. Where public sources are available, verify the official zoning map, the ordinance currently in force, and material approvals or conditions. Cite the controlling section and link for each material finding. Keep drafts separate from adopted rules.
-
-Use one row per parcel for jurisdiction, district, overlays, gross area and any verified constraints. Assess the proposed data center, substation, electrical distribution, and generation or storage separately as applicable. Explain the approval path, relevant height, setback and coverage limits, and what evidence is still missing. Do not infer that an industrial label permits a data center or present screened acreage as verified developable acreage.
+1. Identify the deal, proposed uses, and site. Prefer official parcel boundaries and APNs for a site with multiple parcels. Flag a point lookup as preliminary when boundaries are missing.
+2. Call `research_site_zoning` for Zoneomics evidence. Use v2 for parcel and area screening. Request v3 point enrichment when an overlay, specific plan, or existing building may change the outcome. Treat API responses as evidence. If the tool fails, record the failure and continue with available official sources.
+3. Verify the local parcel map, the ordinance in force, and available approval records. Separate adopted provisions, drafts, and seller claims. Cite the controlling section and URL for each material finding. Flag conflicts and gaps rather than inferring an approval path from a zoning label.
+4. Write the report in Brian’s format. Start with the zoning decision and the main constraints. Give each parcel its own row with APN, jurisdiction, district, overlays, and gross area. Assess the approval path for the data center, substation, electrical distribution, and proposed generation or storage separately. Record the applicable height, setbacks, buffers, and coverage rules. Give screened acreage only when the site geometry and constraints support it, and identify who can resolve each remaining question.

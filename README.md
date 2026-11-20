@@ -2,6 +2,8 @@
 
 A private source repository for the IRG zoning plugin. GitHub access lets you install the package. It does not grant access to the connected app or to Zoneomics credentials.
 
+The Cloudflare Worker handles authenticated Zoneomics lookups. The shared `site-zoning` skill uses that evidence and official records to write the IRG report.
+
 ## Claude Code
 
 ```text
@@ -9,13 +11,13 @@ A private source repository for the IRG zoning plugin. GitHub access lets you in
 /plugin install irg-zoning-reports@irg-zoning
 ```
 
-Requires Node.js 22+ and `ZONOMICS_API_KEY` in the environment of the Claude Code process. Use your authorized secrets manager. IRG team members with access to the existing Doppler config can launch Claude Code with:
+The plugin connects directly to the hosted Cloudflare MCP. IRG team members with access to the Doppler config can launch Claude Code with just the MCP access token:
 
 ```sh
-doppler run --no-fallback -p zoning-power -c dev --only-secrets ZONOMICS_API_KEY -- claude
+doppler run --no-fallback -p zoning-power -c dev --only-secrets IRG_ZONING_MCP_TOKEN -- claude
 ```
 
-This package runs its MCP server locally through stdio. Claude web or cloud execution is not covered by this configuration.
+The token grants access to the MCP, not to Zoneomics itself. Claude web has not been configured for team OAuth sign-in.
 
 ## ChatGPT and Codex
 
@@ -23,7 +25,7 @@ This package runs its MCP server locally through stdio. Claude web or cloud exec
 
 **Codex desktop:** Run `codex plugin marketplace add https://github.com/kavins06/irg-zoning-marketplace`, then select **IRG Zoning** in the desktop plugin directory. The installed app remains subject to its existing access policy.
 
-The OpenAI package references the existing private hosted app. Its Zoneomics credential stays in the server runtime.
+The OpenAI package references the existing private hosted app, which forwards requests to the same Cloudflare Worker. The Zoneomics credential remains in Cloudflare’s runtime secrets.
 
 ## Try it
 

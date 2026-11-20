@@ -1,7 +1,9 @@
 {
   "name": "irg-zoning-reports",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Screen parcels and draft zoning reports for IRG Data sites.",
-  "author": { "name": "kavins06" },
+  "author": {
+    "name": "kavins06"
+  },
   "repository": "https://github.com/kavins06/irg-zoning-marketplace"
 }

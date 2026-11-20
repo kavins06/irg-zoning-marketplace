@@ -1,9 +1,11 @@
 {
   "mcpServers": {
     "irg-zoning": {
-      "type": "stdio",
-      "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/server/stdio.mjs"]
+      "type": "http",
+      "url": "https://irg-zoning-mcp.kavins.workers.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${IRG_ZONING_MCP_TOKEN}"
+      }
     }
   }
 }

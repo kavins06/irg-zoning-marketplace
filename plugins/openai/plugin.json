@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "irg-zoning-reports",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Screen parcels and draft zoning reports for IRG Data sites.",
   "repository": "https://github.com/kavins06/irg-zoning-marketplace",
   "extensions": {
@@ -11,7 +11,9 @@
         "displayName": "IRG Zoning Reports",
         "shortDescription": "Research zoning parcel by parcel.",
         "category": "Productivity",
-        "defaultPrompt": ["Prepare an IRG zoning report for the address or parcel boundaries I provide."]
+        "defaultPrompt": [
+          "Prepare an IRG zoning report for the address or parcel boundaries I provide."
+        ]
       }
     }
   }
