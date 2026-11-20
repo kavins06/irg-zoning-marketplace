@@ -1,4 +1,4 @@
-# IRG Zoning Reports marketplace
+# Zoning Report marketplace
 
 A private source repository for the IRG zoning plugin. GitHub access lets you install the package. It does not grant access to the connected app or to Zoneomics credentials.
 
@@ -21,7 +21,7 @@ The token grants access to the MCP, not to Zoneomics itself. Claude web has not 
 
 ## ChatGPT and Codex
 
-**ChatGPT workspace:** In **Admin → Plugins → Add → Import marketplace**, enter `https://github.com/kavins06/irg-zoning-marketplace` and authorize the GitHub account that can read the repo. Enable access to the existing IRG Zoning Reports app for the intended members separately. Import does not grant access.
+**ChatGPT workspace:** In **Admin → Plugins → Add → Import marketplace**, enter `https://github.com/kavins06/irg-zoning-marketplace` and authorize the GitHub account that can read the repo. Enable access to the existing Zoning Report app for the intended members separately. Import does not grant access.
 
 **Codex desktop:** Run `codex plugin marketplace add https://github.com/kavins06/irg-zoning-marketplace`, then select **IRG Zoning** in the desktop plugin directory. The installed app remains subject to its existing access policy.
 

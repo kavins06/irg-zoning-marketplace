@@ -1,14 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "irg-zoning-reports",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Screen parcels and draft zoning reports for IRG Data sites.",
   "repository": "https://github.com/kavins06/irg-zoning-marketplace",
   "extensions": {
     "com.openai": {
       "apps": "./.app.json",
       "interface": {
-        "displayName": "IRG Zoning Reports",
+        "displayName": "Zoning Report",
         "shortDescription": "Research zoning parcel by parcel.",
         "category": "Productivity",
         "defaultPrompt": [
