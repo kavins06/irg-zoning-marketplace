@@ -27,6 +27,14 @@ The token grants access to the MCP, not to Zoneomics itself. Claude web has not 
 
 The OpenAI package references the existing private, Sites-hosted MCP app. It uses the same zoning implementation as the Claude Worker and authenticates through ChatGPT. Zoneomics credentials stay in server runtime secrets.
 
+## Cloudflare email sign-in
+
+The [OAuth MCP endpoint](https://zoning-mcp.quoindata.com/mcp) uses Cloudflare Access and one-time email codes. It denies access until an administrator adds approved addresses.
+
+In Cloudflare Zero Trust, open **Access controls → Applications → Zoning Report → Policies**. Create an **Allow** policy and add each approved address using the **Emails** selector. Use specific addresses, and keep the application limited to the **Email one-time PIN** login method. No invitation or credential needs to be sent from the plugin. The sign-in flow sends the code when an approved user requests it.
+
+Clients with custom remote MCP support use `https://zoning-mcp.quoindata.com/mcp` and OAuth with automatic client registration. Email sign-in controls access to the MCP. ChatGPT account eligibility and plugin listing availability are separate. The installed private OpenAI app and the existing Claude Code token connection remain available to their current users.
+
 ## Try it
 
 Ask “Prepare an IRG zoning report for 2810 Dogwood Drive SE, Conyers, GA 30013. Show the parcel, development standards, and the evidence needed to determine data center eligibility.”
